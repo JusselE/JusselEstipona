@@ -1,0 +1,59 @@
+html{
+background-color: #C28952 ;
+color: white;
+font-size: 30px;
+font-family: "Sofia", sans-serif;
+  
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 150px;
+    padding-left: 500px;
+    padding-right: 500px;
+    
+}
+
+.grid-item {
+    background-color: #B7671C; /* White background for the card */
+    border: 1px solid #9b5310; /* Light gray border */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 50px; /* Rounded corners */
+    border-width: 3px;
+    height: 500px;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    
+    
+}
+.grid-item {
+   
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Aligns text center for its inline content */
+    flex-direction: column; /* Aligns children elements in a column */
+}
+.grid-item a, .grid-item p {
+    width: 100%;
+    text-align: center;
+}
+
+/* Optional: Media query for small screens */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Full width on small screens */
+    }
+}
+.grid-item {
+    /* ... existing styles ... */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+}
