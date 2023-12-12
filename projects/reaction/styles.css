@@ -1,0 +1,55 @@
+#app {
+    display: flex;
+    flex-direction: column; /* Change to column for better layout */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove any default margin */
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    overflow: hidden; /* Hide overflow */
+}
+
+.click-area {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text horizontally and vertically */
+    background: #950000;
+    cursor: pointer;
+    width: 100%; /* Full width */
+    height: 90%; /* Adjust height to accommodate score area */
+}
+
+.display-text {
+    padding: 24px;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.recent-scores {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width */
+    height: 10%; /* Set height to occupy the remaining space */
+    align-items: center; /* Center score elements */
+}
+
+.score {
+    width: 100%; /* Full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px; /* Adjust padding */
+}
+
+.score:nth-child(odd) {
+    background: #eeeeee;
+}
+
+body, html {
+    margin: 0; /* Remove margin from body and html */
+    padding: 0; /* Remove padding from body and html */
+    width: 100%; /* Ensure body and html cover full width */
+    height: 100%; /* Ensure body and html cover full height */
+}
