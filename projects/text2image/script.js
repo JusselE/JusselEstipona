@@ -1,22 +1,23 @@
 const apiKey = "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";
-const maxImages = 4;
+const maxImages = 6;
 let selectedImageNumber = null;
 
 // Separate query function
 async function query(data) {
-    const response = await fetch(
-        "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5",
-        {
-            headers: { Authorization: `Bearer ${apiKey}` },
-            method: "POST",
-            body: JSON.stringify(data),
-        }
-    );
-    if (!response.ok) {
-        throw new Error('Failed to fetch image');
-    }
-    return await response.blob();
+	const response = await fetch(
+		"https://api-inference.huggingface.co/models/playgroundai/playground-v2-1024px-aesthetic",
+		{
+			headers: { Authorization: "Bearer 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" },
+			method: "POST",
+			body: JSON.stringify(data),
+		}
+	);
+	const result = await response.blob();
+	return result;
 }
+query({"inputs": "Astronaut riding a horse"}).then((response) => {
+	// Use image
+});
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
